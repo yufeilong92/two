@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:paddingLeft="12dp"
+                                             android:paddingRight="12dp"
+                                             android:paddingBottom="12dp"
+                                             android:paddingTop="22dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_ddiver_header"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            style="@style/place_image_style"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCornerRadius="5dp"/>
+
+    <TextView
+            android:id="@+id/item_ddiver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/item_ddiver_header"
+            app:layout_constraintTop_toTopOf="@+id/item_ddiver_header"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价少于3条"
+            android:textColor="@color/main_text9"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@+id/item_ddiver_name"
+            app:layout_constraintBottom_toBottomOf="@+id/item_ddiver_name"
+            android:layout_marginLeft="15dp"
+    />
+
+    <TextView
+            android:id="@+id/item_ddiver_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@+id/item_ddiver_name"
+            app:layout_constraintTop_toBottomOf="@+id/item_ddiver_name"
+            android:layout_marginTop="3dp"
+    />
+
+    <ImageView
+            android:id="@+id/item_ddiver_loca_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/icon_location"
+            app:layout_constraintLeft_toLeftOf="@+id/item_ddiver_name"
+            app:layout_constraintTop_toBottomOf="@+id/item_ddiver_car"
+            android:layout_marginTop="5dp"
+    />
+
+    <TextView
+            android:id="@+id/item_ddiver_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text9"
+            android:textSize="11sp"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_ddiver_loca_icon"
+            app:layout_constraintTop_toTopOf="@+id/item_ddiver_loca_icon"
+    />
+
+    <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/item_ddiver_loca_icon"
+            android:layout_marginRight="26dp"
+            android:src="@mipmap/icon_tophone"/>
+
+    <View
+            android:id="@+id/item_ddiver_line"
+            style="@style/line_style"
+            app:layout_constraintTop_toBottomOf="@+id/item_ddiver_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="12dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="指定承运"
+            android:textColor="@color/main_color"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@+id/item_ddiver_line"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:background="@drawable/bg_line_red"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+</android.support.constraint.ConstraintLayout>

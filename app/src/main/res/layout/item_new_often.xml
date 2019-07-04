@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_16"
+    android:background="@drawable/gm_bg_radio_white"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/red_phone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_item_often_city"
+            style="@style/text_16_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="城市" />
+
+        <TextView
+            android:id="@+id/tv_item_often_infom"
+            style="@style/text_13_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_often_city"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="内容" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_often_infom"
+            android:layout_marginTop="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/tv_item_often_release_make"
+                style="@style/text_12_title_fu"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布时间:" />
+
+            <TextView
+                android:id="@+id/tv_item_often_release_time"
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_item_often_release_make"
+                android:text="" />
+            <TextView
+                android:text="删除"
+                android:layout_width="76dp"
+                android:gravity="center"
+                android:id="@+id/tv_item_often_delete"
+                style="@style/text_11_title"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@id/tv_item_often_again"
+                android:background="@drawable/bg_often_delete_raidou"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingBottom="@dimen/dp_4"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="再发一单"
+                android:id="@+id/tv_item_often_again"
+                android:layout_alignParentRight="true"
+                style="@style/text_11_title_white"
+                android:background="@drawable/bg_often_delete_raidou_black"
+                android:layout_width="76dp"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingBottom="@dimen/dp_4"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

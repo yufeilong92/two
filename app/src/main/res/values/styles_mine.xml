@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--这是首页底部条目的样式-->
+    <style name="Buttom_Item_Style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">LayoutOnclickMethod</item>
+    </style>
+
+    <!-- smartTableLayout 的样式 -->
+    <style name="smarttablayout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="stl_customTabTextLayoutId">@layout/cell_smart_tab_text</item>
+        <item name="stl_customTabTextViewId">@+id/tab_text</item>
+        <item name="stl_distributeEvenly">true</item>
+        <item name="stl_dividerColor">@color/transport_tab_text</item>
+        <item name="stl_dividerThickness">0dp</item>
+        <item name="stl_indicatorColor">@color/transport_tab_text</item>
+        <item name="stl_indicatorCornerRadius">5dp</item>
+        <item name="stl_indicatorThickness">3dp</item>
+        <item name="stl_indicatorWidth">30dp</item>
+        <item name="stl_titleOffset">auto_center</item>
+        <item name="stl_underlineColor">@color/transport_tab_text</item>
+        <item name="stl_underlineThickness">1px</item>
+    </style>
+
+    <style name="smarttablayout_style_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="stl_customTabTextLayoutId">@layout/cell_smart_tab_two</item>
+        <item name="stl_customTabTextViewId">@+id/tab_two_text</item>
+        <item name="stl_distributeEvenly">true</item>
+        <item name="stl_dividerColor">@color/main_color</item>
+        <item name="stl_dividerThickness">0dp</item>
+        <item name="stl_indicatorColor">@color/main_color</item>
+        <item name="stl_indicatorCornerRadius">1dp</item>
+        <item name="stl_indicatorThickness">2dp</item>
+        <item name="stl_indicatorWidth">100dp</item>
+        <item name="stl_titleOffset">auto_center</item>
+        <item name="stl_underlineColor">@color/main_line</item>
+        <item name="stl_underlineThickness">1px</item>
+    </style>
+
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/main_line</item>
+    </style>
+
+    <style name="next_style">
+        <item name="android:layout_width">7dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:background">@mipmap/icon_toright_small</item>
+    </style>
+
+
+    <style name="header_image_style">
+        <item name="failureImage">@mipmap/icon_header</item>
+        <item name="failureImageScaleType">centerCrop</item>
+    </style>
+
+    <style name="place_image_style">
+        <item name="failureImage">@mipmap/icon_place</item>
+        <item name="failureImageScaleType">fitXY</item>
+    </style>
+
+</resources>

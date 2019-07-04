@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_me_bg"
+    android:orientation="vertical"
+    tools:context=".ui.find.OwnerNewDetailActivity">
+
+    <include layout="@layout/gm_title_layout_transparent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_owner_detail_all"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_20"
+            android:id="@+id/rl_owner_detail_hear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_owner_detail_name"
+                style="@style/text_16_white_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_owner_detail_create_time"
+                style="@style/text_13_title_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_owner_detail_name"
+                android:text="注册时间" />
+
+            <RelativeLayout
+                android:id="@+id/rl_owner_detail_infom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_owner_detail_create_time">
+
+                <ImageView
+                    android:id="@+id/iv_owner_detail_realname"
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_findgood_readname" />
+
+                <ImageView
+                    android:id="@+id/iv_owner_detail_dao"
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/iv_owner_detail_realname"
+                    android:src="@mipmap/ic_findgood_dao" />
+            </RelativeLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_owner_detail_header"
+                style="@style/place_image_style"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_alignParentRight="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundedCornerRadius="5dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_owner_detail_company"
+            style="@style/text_13_title_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_owner_detail_hear"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:drawableLeft="@mipmap/gongsi"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="公司" />
+
+        <TextView
+            android:id="@+id/tv_owner_detail_address"
+            style="@style/text_13_title_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_owner_detail_company"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_16"
+            android:drawableLeft="@mipmap/ic_owner_detail_address"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="地址" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_72"
+            android:layout_below="@id/tv_owner_detail_address"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_owner_detail_send_number"
+                    style="@style/text_30_title_whiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="520"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_12_title_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_owner_detail_send_number"
+                    android:text="发货数" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_owner_detail_deal_number"
+                    style="@style/text_30_title_whiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="520"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_12_title_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_owner_detail_deal_number"
+                    android:text="交易数" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_13_title_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_owner_detail_it"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/gm_bg_radio_black"
+                    android:drawableLeft="@mipmap/ic_owner_detail_phone"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="联系货主" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_owner_detail_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_16"
+        android:background="@drawable/gm_radio_top_10_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_owner_detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_owner_detail_title1"
+                style="@style/text_15_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当天货源" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_toRightOf="@id/tv_owner_detail_title1"
+                android:id="@+id/tv_owner_detail_title2"
+                android:text="("
+                style="@style/text_15_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@id/tv_owner_detail_title2"
+                android:id="@+id/tv_owner_detail_title3"
+                android:text="0"
+                style="@style/text_15_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@id/tv_owner_detail_title3"
+                android:text=")"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_owner_detail_recycle"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@id/rl_owner_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

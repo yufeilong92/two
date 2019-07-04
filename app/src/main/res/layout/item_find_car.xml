@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_white5"
+    android:paddingLeft="20dp"
+    android:paddingTop="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="14dp">
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:id="@+id/item_findcar_header"-->
+        <!--style="@style/place_image_style"-->
+        <!--android:layout_width="68dp"-->
+        <!--android:layout_height="68dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:roundedCornerRadius="5dp" />-->
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/item_findcar_header"
+        android:scaleType="fitXY"
+        android:layout_width="68dp"
+        android:layout_height="68dp" />
+
+
+    <TextView
+        android:id="@+id/item_findcar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/main_text3"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/item_findcar_header"
+        app:layout_constraintTop_toTopOf="@+id/item_findcar_header" />
+
+    <TextView
+        android:id="@+id/item_findcar_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="@color/main_text3"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/item_findcar_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_findcar_name" />
+
+    <TextView
+        android:id="@+id/item_findcar_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="@color/main_blue_text"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/item_findcar_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_findcar_no" />
+
+    <LinearLayout
+        android:id="@+id/item_findcar_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+       android:paddingRight="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:visibility="gone"
+            android:src="@mipmap/icon_add_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="熟车"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:drawableTop="@mipmap/people"
+            android:textColor="@color/gm_color"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_findcar_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        app:layout_constraintRight_toLeftOf="@+id/item_findcar_add"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/icon_phone"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/phone"
+            android:gravity="center"
+            android:text="电话"
+            android:drawablePadding="@dimen/dp_8"
+            android:textColor="@color/gm_color"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

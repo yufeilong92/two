@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/main_bg"
+              android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/ffindcar_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/bg_white5">
+
+        <ImageView
+                android:id="@+id/ffindcar_search_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_search"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <EditText
+                android:id="@+id/ffindcar_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="通过手机号搜索司机"
+                android:textColor="@color/main_text3"
+                android:textColorHint="@color/main_text9"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/ffindcar_search_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:lines="1"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:imeOptions="actionSearch"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/ffindcar_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/ffindcar_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/ffindcar_contentno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/driver_search_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="该手机号未注册，赶紧邀请他注册"
+                android:textColor="@color/main_text6"
+                android:textSize="13sp"
+                android:paddingLeft="22dp"
+                android:paddingTop="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/ffindcar_button01"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="立即邀请"
+                android:textColor="@color/white"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginRight="34dp"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@+id/driver_search_text01"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:background="@drawable/bg_red5"
+        />
+
+        <TextView
+                android:id="@+id/ffindcar_button02"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="联系他"
+                android:textColor="@color/main_color"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@+id/driver_search_text01"
+                app:layout_constraintRight_toLeftOf="@+id/ffindcar_button01"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center"
+                android:background="@drawable/bg_line_red"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

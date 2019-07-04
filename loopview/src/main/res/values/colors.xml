@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="loop_line">#dfdfdf</color>
+    <color name="loop_gray">#aaaaaa</color>
+    <color name="loop_main">#00b500</color>
+</resources>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        tools:context=".ui.mine.owners.InvoiceActivity">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:background="@color/main_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/invoice_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleName="发票信息"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_invoice_icon"
+            android:layout_marginRight="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_top"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/invoice_view01"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="76dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的专票资质"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="26dp"
+            />
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_tip_bg"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:paddingBottom="26dp">
+
+                <android.support.constraint.Guideline
+                        android:id="@+id/invoice_line01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.083"
+                        android:orientation="vertical"
+                />
+
+                <android.support.constraint.Guideline
+                        android:id="@+id/invoice_line02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.917"
+                        android:orientation="vertical"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="增值税专用发票"
+                        android:textColor="@color/main_color_text"
+                        android:textSize="14sp"
+                        android:layout_marginTop="22dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        app:layout_constraintRight_toRightOf="@+id/invoice_line02"
+
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票抬头"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_text01"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="26dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text02"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text02"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="纳税人识别码"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_name"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text03"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text03"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册地址"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_number"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text04"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text04"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册电话"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_address"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text05"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text05"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行名称"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_phone"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text06"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text06"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行账号"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_bank"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_bankno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text07"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text07"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_text08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票内容"
+                        android:textColor="@color/main_text6"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@+id/invoice_bankno"
+                        app:layout_constraintLeft_toLeftOf="@+id/invoice_line01"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"/>
+
+                <TextView
+                        android:id="@+id/invoice_remark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="@dimen/invoice_text_size01"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintTop_toTopOf="@+id/invoice_text08"
+                        app:layout_constraintLeft_toRightOf="@+id/invoice_text08"
+                        app:layout_constraintRight_toLeftOf="@+id/invoice_line02"
+                />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@mipmap/icon_tishi"
+                        android:layout_marginTop="2dp"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本页面信息仅供增值税专用发票资质审核使用，切勿进行支付相关业务，谨防上当受骗。"
+                        android:textColor="@color/main_color"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="5dp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp">
+
+                <TextView
+                        android:id="@+id/invoice_modify"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:text="修改"
+                        android:gravity="center"
+                        android:textColor="@color/main_color_text"
+                        android:layout_weight="1"
+                        android:layout_marginRight="13dp"
+                        android:background="@drawable/bg_line_red"
+                        android:textSize="12sp"
+                />
+
+                <TextView
+                        android:id="@+id/invoice_submit"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:text="提交"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="13dp"
+                        android:background="@drawable/bg_red5"
+                        android:textSize="12sp"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+            android:id="@+id/invoice_line03"
+            android:layout_width="1px"
+            android:layout_height="14dp"
+            android:background="@color/main_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+    <TextView
+            android:id="@+id/invoice_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="6dp"
+            android:paddingLeft="12dp"
+            android:text="联系客服"
+            android:textColor="@color/main_text9"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/invoice_line03"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="12dp"
+            android:paddingLeft="6dp"
+            android:text="申请历史"
+            android:textColor="@color/main_text9"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/invoice_line03"
+    />
+
+</android.support.constraint.ConstraintLayout>

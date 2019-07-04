@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_dao_authen_bg"
+    tools:context=".ui.login.LoginCodeActivity">
+
+    <ImageView
+        android:id="@+id/login_getcode_back"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginBottom="30dp"
+        android:padding="16dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:src="@mipmap/arrow" />
+
+    <TextView
+        android:id="@+id/login_getcode_qu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_getcode_back"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="2dp"
+        android:text="（+86） "
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/login_getcode_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/login_getcode_qu"
+        android:layout_toRightOf="@+id/login_getcode_qu"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/login_getcode_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_getcode_phone"
+        android:layout_marginLeft="40dp"
+        android:text="填写验证码"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/login_getcode_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_getcode_text1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="7dp"
+        android:text="请填写发送到您手机上的验证码"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/login_getcode_layout"
+        layout="@layout/cell_getcode"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/login_getcode_text2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="40dp" />
+</RelativeLayout>

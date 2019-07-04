@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.mine.wallet.WalletNewActivity">
+    <include layout="@layout/gm_title_layout"/>
+    <RelativeLayout android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+        <ImageView android:layout_width="match_parent"
+                   android:src="@mipmap/ic_money_card_top_bg"
+                   android:scaleType="fitXY"
+                   android:layout_marginTop="@dimen/dp_16"
+                   android:layout_marginLeft="@dimen/dp_16"
+                   android:layout_marginRight="@dimen/dp_16"
+                   android:id="@+id/iv_wallect_top"
+                   android:layout_height="wrap_content"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginRight="@dimen/dp_16"
+                      android:layout_marginLeft="@dimen/dp_16"
+                      android:padding="@dimen/dp_16"
+                      android:background="@drawable/bg_wallect_id_card_back"
+                      android:layout_below="@id/iv_wallect_top"
+                      android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:text="可用余额"
+                          style="@style/text_14_white_title"
+                          android:layout_height="wrap_content"/>
+                <RelativeLayout android:layout_width="wrap_content"
+                                android:layout_height="31dp">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="0"
+                              style="@style/text_26_white_title"
+                              android:id="@+id/tv_wallect_remaining_sum"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="元"
+                              android:layout_alignParentBottom="true"
+                              style="@style/text_14_white_title"
+                              android:layout_toRightOf="@id/tv_wallect_remaining_sum"
+                              android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content"
+                      android:text="银行卡管理"
+                      android:paddingLeft="@dimen/dp_16"
+                      android:paddingRight="@dimen/dp_16"
+                      android:paddingTop="@dimen/dp_4"
+                      android:paddingBottom="@dimen/dp_4"
+                      android:id="@+id/tv_wallect_add_card"
+                      android:background="@drawable/bg_wallect_card_bank"
+                      style="@style/text_14_white_title"
+                      android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_marginRight="@dimen/dp_60"
+                  android:layout_marginLeft="@dimen/dp_60"
+                  android:paddingTop="@dimen/dp_2"
+                  android:background="@mipmap/ic_money_bg"
+                  android:layout_marginTop="@dimen/dp_16"
+                  android:layout_height="@dimen/dp_48">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_weight="1"
+                  android:text="充值"
+                  android:gravity="center"
+                  android:id="@+id/tv_wallect_recharge"
+                  style="@style/text_14_title"
+                  android:layout_height="@dimen/dp_48"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_weight="1"
+                  android:text="提现"
+                  android:gravity="center"
+                  android:id="@+id/tv_wallect_withdraw_deposit"
+                  style="@style/text_14_white_title"
+                  android:layout_height="@dimen/dp_48"/>
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl_wallet_refresh"
+            android:layout_width="match_parent"
+            app:srlEnableRefresh="false"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_money_wallet_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

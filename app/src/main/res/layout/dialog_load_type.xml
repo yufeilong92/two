@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:id="@+id/dialog_load"
+              android:background="@color/white">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <TextView
+                android:id="@+id/dialog_load_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="取消"
+                android:textColor="@color/main_text9"
+                android:textSize="14sp"
+                android:paddingLeft="16dp"
+                android:paddingRight="36dp"
+                android:gravity="center"
+        />
+
+        <TextView
+                android:id="@+id/dialog_load_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="确定"
+                android:textColor="#ff2391e9"
+                android:textSize="14sp"
+                android:paddingLeft="36dp"
+                android:paddingRight="16dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+        />
+    </RelativeLayout>
+
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@color/main_line"/>
+
+    <com.weigan.loopview.LoopView
+            android:id="@+id/dialog_load_loop"
+            app:awv_centerTextColor="@color/main_color"
+            app:awv_outerTextColor="@color/main_text6"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:awv_textsize="20"/>
+
+</LinearLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_10"
+    android:background="@drawable/gm_bg_radio_white"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <RelativeLayout
+        android:paddingRight="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_findgood_source_header"
+            style="@style/place_image_style"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCornerRadius="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/sdv_findgood_source_header"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_name"
+                style="@style/text_14_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="姓名"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_item_findgood_readname"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/ic_findgood_readname" />
+
+            <ImageView
+                android:id="@+id/iv_item_findgood_dao"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/ic_findgood_dao" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_item_findgood_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_findgood_tv_phone"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="电话联系"
+                android:textColor="@color/red_phone"
+                android:textSize="@dimen/tv_10" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_findgood_time"
+            style="@style/text_12_title_fu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/sdv_findgood_source_header"
+            android:text="" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_city"
+                style="@style/text_18_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:minLines="2"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_findgood_address"
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_findgood_city"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_findgood_go" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp_4"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_loadcity"
+                style="@style/text_18_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:minLines="2"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_findgood_loadAddress"
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_findgood_loadcity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_1_heigth_fu"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_dun"
+                style="@style/text_14_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_findgood_dun"
+                android:layout_centerHorizontal="true"
+                android:text="吨数" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_car"
+                style="@style/text_14_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_findgood_car"
+                android:layout_centerHorizontal="true"
+                android:text="车辆" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_item_findgood_cargo"
+                style="@style/text_14_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_12_title_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_findgood_cargo"
+                android:layout_centerHorizontal="true"
+                android:text="货物" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

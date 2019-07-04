@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/white"
+                                             android:paddingTop="14dp"
+                                             android:paddingLeft="18dp"
+                                             android:paddingBottom="18dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/protocol_man_icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            style="@style/place_image_style"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="50dp"/>
+
+    <LinearLayout
+            android:id="@+id/fprotocol_layout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="@color/main_text9"
+                android:textSize="12sp"
+        />
+
+        <TextView
+                android:id="@+id/protocol_man_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_text3"
+                android:layout_marginLeft="41dp"
+                android:textSize="12sp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/fprotocol_layout02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fprotocol_layout01"
+            android:layout_marginTop="8dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系方式"
+                android:textColor="@color/main_text9"
+                android:textSize="12sp"
+        />
+
+        <TextView
+                android:id="@+id/protocol_man_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_text3"
+                android:layout_marginLeft="@dimen/protocol_space"
+                android:textSize="12sp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/fprotocol_layout03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fprotocol_layout02"
+            android:layout_marginTop="8dp">
+
+        <TextView
+                android:id="@+id/protocol_man_adr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公司地址"
+                android:textColor="@color/main_text9"
+                android:textSize="12sp"
+        />
+
+        <TextView
+                android:id="@+id/protocol_man_adr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_text3"
+                android:layout_marginLeft="@dimen/protocol_space"
+                android:textSize="12sp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/fprotocol_layout04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fprotocol_layout03"
+            android:layout_marginTop="8dp">
+
+        <TextView
+                android:id="@+id/protocol_man_time_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发起时间"
+                android:textColor="@color/main_text9"
+                android:textSize="12sp"
+        />
+
+        <TextView
+                android:id="@+id/protocol_man_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_text3"
+                android:layout_marginLeft="@dimen/protocol_space"
+                android:textSize="12sp"
+        />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

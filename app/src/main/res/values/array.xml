@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cancle_order_case">
+        <item>司机时间有变，协商取消</item>
+        <item>因厂家原因取消订单</item>
+        <item>因天气或其他不可抵抗力原因取消订单</item>
+        <item>其他</item>
+    </array>
+</resources>

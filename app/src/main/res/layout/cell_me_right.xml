@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="20dp">
+
+    <ImageView
+            android:id="@+id/cell_me_right_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_me_authentication"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:id="@+id/cell_me_right_name"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="道认证"
+            android:textColor="@color/main_text3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginLeft="52dp"
+            app:layout_constraintLeft_toRightOf="@+id/cell_me_right_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/icon_toright_small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

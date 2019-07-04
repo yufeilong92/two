@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <com.shangxing.views.page.MyBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/fmain4_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleName="我的运输单"
+            app:isBack="false"
+            app:rightText="联系客服"/>
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/fmain4_smart"
+            style="@style/smarttablayout_style_normal"
+            android:background="@color/white"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/fmain4_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

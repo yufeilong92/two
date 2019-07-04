@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/main_bg"
+>
+
+    <com.shangxing.views.page.MyBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/gm_color"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/fmain2_toaddr"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fmain2_totype"
+                android:background="@drawable/bg_white_line4"
+                android:visibility="gone"
+        >
+            <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="7dp"
+                    android:src="@mipmap/icon_down_white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="15dp"
+            />
+
+            <TextView
+                    android:id="@+id/fmain2_toaddr_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择省市区"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/fmain2_totype"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/bg_white_line4"
+        >
+            <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="7dp"
+                    android:src="@mipmap/icon_down_white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="15dp"
+            />
+
+            <TextView
+                    android:id="@+id/fmain2_totype_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择车型车长"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/fmain2_smarttab"
+            style="@style/smarttablayout_style_normal"
+            android:background="@color/white"/>
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/fmain2_viewpager"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

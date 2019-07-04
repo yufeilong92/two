@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context=".ui.publish.ShipmentsActivity">
+
+    <include layout="@layout/gm_title_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbarThumbVertical="@color/transparent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/gm_radio_top_4_white"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="货物名称" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="必填,可帮您更快的找到司机" />
+
+                    <EditText
+                        android:id="@+id/et_shipment_good_name"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:maxLength="32"
+                        android:theme="@style/shipment_et_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_shipment_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="发货地" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_city"
+                        style="@style/shipments_tv_10_fu"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:gravity="center"
+                        android:hint="请选择发货地区" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/icon_toright_small" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:visibility="invisible"
+                    android:background="@color/dao_dark_red_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="地址" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="请填写详细的发货地址" />
+
+                    <com.zzzh.akhalteke_shipper.view.custom.ContentEditText
+                        android:id="@+id/et_shipment_address"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:maxLength="32"
+                        android:maxLines="3"
+                        android:theme="@style/shipment_et_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:layout_weight="1"
+                        android:text="卸货地" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_uncity"
+                        style="@style/shipments_tv_10_fu"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:gravity="center"
+                        android:hint="请选择卸货地区" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/icon_toright_small" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gm_radio_top_4_white"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:visibility="invisible"
+                    android:background="@color/dao_dark_red_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="地址" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="请填写详细的卸货地址" />
+
+                    <com.zzzh.akhalteke_shipper.view.custom.ContentEditText
+                        android:id="@+id/et_shipment_unaddress"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:maxLength="32"
+                        android:maxLines="3"
+                        android:theme="@style/shipment_et_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/gm_radio_top_4_white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_16">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_shipment_cartype"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="需要车长车型" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_car_type"
+                        style="@style/shipments_tv_10_fu"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="请选择车长车型" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/icon_toright_small" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="货物质量" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_red"
+                        android:text="货物质量/体积请至少填一项" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_shipment_quality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_shipment_tv_input"
+                            android:gravity="center"
+                            android:hint="最大1000"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/tv_10" />
+
+                        <TextView
+                            style="@style/text_14_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:text="吨" />
+
+                        <EditText
+                            android:id="@+id/et_shipment_volume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_shipment_tv_input"
+                            android:gravity="center"
+                            android:hint="最大1000"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/tv_10" />
+
+                        <TextView
+                            style="@style/text_14_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:text="方" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="货运运费" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="选填，可帮您更快的找到司机" />
+
+                    <EditText
+                        android:id="@+id/et_shipment_cunt"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLength="32"
+                        android:theme="@style/shipment_et_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shipment_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="装货时间" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="选填，可帮您更快的找到司机" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:gravity="bottom"
+                        android:textColor="@color/main_text3"
+                        android:theme="@style/shipment_et_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:background="@color/et_shipment_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shipment_goodsnum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="几装几卸" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="选填，可帮您更快的找到司机" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_goodsnum"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:gravity="bottom"
+                        android:theme="@style/shipment_et_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:background="@color/et_shipment_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shipment_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="支付方式" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="选填，可帮您更快的找到司机" />
+
+                    <TextView
+                        android:id="@+id/tv_shipment_pay_type"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:gravity="bottom"
+                        android:theme="@style/shipment_et_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:background="@color/main_text9" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:background="@color/dao_dark_red_bg"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/shipments_tv_14_title"
+                        android:text="备注" />
+
+                    <TextView
+                        style="@style/shipments_tv_10_fu"
+                        android:text="选填，可帮您更快的找到司机" />
+
+                    <com.zzzh.akhalteke_shipper.view.custom.ContentEditText
+                        android:id="@+id/et_shipment_mark"
+                        style="@style/text_14_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:maxLength="32"
+                        android:maxLines="3"
+                        android:theme="@style/shipment_et_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_shipment_sel"
+                style="@style/text_14_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:button="@drawable/selector_shipment_select"
+                android:checked="true"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="保存常发货源" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="货源最多保留48小时"
+                android:textColor="@color/main_text9"
+                android:textSize="@dimen/tv_9" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_shipment_appoint"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shipment_tv_driver"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    android:text="指定司机"
+                    android:textColor="@color/tv_shipment_color" />
+
+                <TextView
+                    android:id="@+id/tv_shipment_publish"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_shipment_appoint"
+                    android:background="@drawable/bg_shipment_tv_publish"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    android:text="发布"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

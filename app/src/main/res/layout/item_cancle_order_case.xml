@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:text="@string/app_name"
+          android:textColor="@color/main_text3"
+          android:textSize="@dimen/tv_16"
+          android:paddingLeft="@dimen/dp_10"
+          android:layout_marginTop="@dimen/dp_10"
+          android:button="@drawable/select_order_cancle"
+          android:id="@+id/cb_order_detail_case"
+          android:layout_height="wrap_content">
+
+
+</CheckBox>

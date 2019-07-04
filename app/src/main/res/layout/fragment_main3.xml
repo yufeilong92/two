@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg">
+
+    <com.shangxing.views.page.MyBarView
+            android:id="@+id/fmain1_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:id="@+id/fmain1_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:layout_below="@+id/fmain1_bar"
+            android:background="@color/gm_color"
+    >
+
+        <LinearLayout
+                android:id="@+id/fmain1_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="8dp"
+                android:visibility="gone">
+
+            <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="19dp"
+                    android:src="@mipmap/icon_back_white"/>
+
+        </LinearLayout>
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/fmain1_smarttab"
+                style="@style/smarttablayout_style"
+                android:layout_width="200dp"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/fmain1_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fmain1_top"/>
+
+    <ImageView
+            android:id="@+id/fmain1_publish"
+            android:layout_width="124dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_send_goods"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="60dp"/>
+
+</RelativeLayout>

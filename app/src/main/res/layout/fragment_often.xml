@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <!--<include-->
+    <!--android:id="@+id/foften_tab"-->
+    <!--layout="@layout/cell_main_send_tab"/>-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/foften_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/foften_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        tools:context=".ui.mine.address.AddressManagerActivity">
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/adr_manager_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleName="地址管理"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <LinearLayout
+            android:id="@+id/adr_manager_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:6.7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:background="@drawable/gm_bg_radio_black">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_add"/>
+
+        <TextView
+                android:id="@+id/adr_manager_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新增地址"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"
+        />
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/address_manager_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/adr_manager_top"
+            app:layout_constraintBottom_toTopOf="@+id/adr_manager_bottom"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="12dp">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/address_manager_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/white">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:src="@mipmap/icon_mine_bg"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="80dp">
+
+            <android.support.constraint.ConstraintLayout
+                    android:id="@+id/fmain5_layout01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/bg_white_top5"
+                    android:layout_marginTop="52dp">
+
+                <View
+                        android:id="@+id/fmain5_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain5_line01"/>
+
+                <TextView
+                        android:id="@+id/fmain5_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="马道"
+                        android:textColor="@color/main_text3"
+                        android:textSize="17sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginTop="40dp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/fmain5_text01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正驾"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="9dp"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_name"
+                        app:layout_constraintTop_toTopOf="@+id/fmain5_name"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain5_name"
+                        android:visibility="gone"/>
+
+                <ImageView
+                        android:id="@+id/fmain5_icon"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="20dp"/>
+
+                <TextView
+                        android:id="@+id/fmain5_company"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_text3"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingLeft="38dp"
+                        android:paddingRight="10dp"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_text01"
+                        app:layout_constraintTop_toTopOf="@+id/fmain5_name"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain5_name"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_icon"
+                />
+
+                <View
+                        android:id="@+id/fmain5_line01"
+                        style="@style/line_style"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_company"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="28dp"/>
+
+                <View
+                        android:id="@+id/fmain_wattle"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_line01"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ImageView
+                        android:id="@+id/fmain5_icon02"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/icon_wattle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        android:layout_marginLeft="52dp"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的钱包"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_icon02"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        android:layout_marginLeft="12dp"
+                />
+
+                <ImageView
+                        android:id="@+id/fmain5_next01"
+                        style="@style/next_style"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="30dp"
+                />
+
+                <TextView
+                        android:id="@+id/fmain5_txt01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textColor="@color/main_text3"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_next01"
+                        android:layout_marginRight="27dp"
+                        android:paddingTop="3dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                />
+
+                <TextView
+                        android:id="@+id/fmain_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/main_text3"
+                        android:textSize="17sp"
+                        android:layout_marginRight="1dp"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_txt01"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="余额"
+                        android:textColor="@color/main_text9"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="@+id/fmain_wattle"
+                        app:layout_constraintBottom_toBottomOf="@+id/fmain_wattle"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain_money"
+                        android:layout_marginRight="9dp"
+                />
+
+                <View
+                        android:id="@+id/fmain5_line02"
+                        style="@style/line_style"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain_wattle"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                <ImageView
+                        android:id="@+id/fmain5_cell01"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_cell02"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_line02"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="18dp"
+                        android:src="@mipmap/icon_main_cell01"
+                />
+
+                <ImageView
+                        android:id="@+id/fmain5_cell02"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_cell01"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_cell03"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_line02"
+                        android:layout_marginTop="18dp"
+                        android:src="@mipmap/icon_main_cell02"
+                />
+
+                <ImageView
+                        android:id="@+id/fmain5_cell03"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_cell02"
+                        app:layout_constraintRight_toLeftOf="@+id/fmain5_cell04"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_line02"
+                        android:layout_marginTop="18dp"
+                        android:src="@mipmap/icon_main_cell03"
+                />
+
+                <ImageView
+                        android:id="@+id/fmain5_cell04"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/fmain5_cell03"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_line02"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="32dp"
+                        android:src="@mipmap/icon_main_cell04"
+                />
+
+                <TextView
+                        android:id="@+id/fmain5_cell01_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="城市合伙人"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/fmain5_cell01"
+                        app:layout_constraintRight_toRightOf="@+id/fmain5_cell01"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_cell01"
+                        android:paddingBottom="20dp"/>
+
+                <TextView
+                        android:id="@+id/fmain5_cell02_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="地址管理"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/fmain5_cell02"
+                        app:layout_constraintRight_toRightOf="@+id/fmain5_cell02"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_cell02"
+                        android:paddingBottom="20dp"/>
+
+                <TextView
+                        android:id="@+id/fmain5_cell03_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票管理"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/fmain5_cell03"
+                        app:layout_constraintRight_toRightOf="@+id/fmain5_cell03"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_cell03"
+                        android:paddingBottom="20dp"/>
+
+                <TextView
+                        android:id="@+id/fmain5_cell04_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关于我们"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/fmain5_cell04"
+                        app:layout_constraintRight_toRightOf="@+id/fmain5_cell04"
+                        app:layout_constraintTop_toBottomOf="@+id/fmain5_cell04"
+                        android:paddingBottom="20dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fmain5_header"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    style="@style/header_image_style"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:roundAsCircle="true"/>
+
+
+            <LinearLayout
+                    android:id="@+id/fmain5_dao"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/fmain5_layout01"
+                    android:background="#F1F2F7">
+
+                <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:src="@mipmap/icon_dao_small"
+                        android:layout_marginLeft="35dp"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="道认证"
+                        android:gravity="center"
+                        android:textColor="@color/main_text3"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="14dp"
+                />
+            </LinearLayout>
+
+            <include
+                    android:id="@+id/fmain5_phone"
+                    layout="@layout/cell_main_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/fmain5_dao"
+                    android:layout_marginTop="6dp"/>
+
+            <include
+                    android:id="@+id/fmain5_notice"
+                    layout="@layout/cell_main_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/fmain5_phone"
+                    android:layout_marginTop="1px"/>
+
+            <include
+                    android:id="@+id/fmain5_set"
+                    layout="@layout/cell_main_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/fmain5_notice"
+                    android:layout_marginTop="1px"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

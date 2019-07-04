@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+
+>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/icon_card_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_text01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转账信息"
+            android:textColor="@color/main_text3"
+            android:textSize="14sp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line01"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_color"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_text01"/>
+
+    <View
+            android:id="@+id/item_transfer_dot01"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text02"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text02"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收款账号："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot01"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line01"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginRight="12dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text02"
+            app:layout_constraintRight_toLeftOf="@+id/item_transfer_copy"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text02"
+    />
+
+
+    <TextView
+            android:id="@+id/item_transfer_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制"
+            android:textColor="@color/main_color"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/bg_line_red_oval"
+            android:layout_marginRight="34dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text02"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line02"
+            style="@style/line_style"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="@dimen/transfer_space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_number"/>
+
+
+    <View
+            android:id="@+id/item_transfer_dot02"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text03"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text03"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收款账户名称："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot02"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line02"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="中州智惠物流股份有限公司"
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginRight="34dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text03"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text03"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line03"
+            style="@style/line_style"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="@dimen/transfer_space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_name"/>
+
+    <View
+            android:id="@+id/item_transfer_dot03"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text04"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text04"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户行："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot03"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line03"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginRight="34dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text04"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text04"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line04"
+            style="@style/line_style"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="@dimen/transfer_space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_bank"/>
+
+    <View
+            android:id="@+id/item_transfer_dot04"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text05"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text05"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用途："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot04"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line04"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_way"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="运费"
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginRight="34dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text05"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text05"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line05"
+            style="@style/line_style"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="@dimen/transfer_space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_way"/>
+
+    <View
+            android:id="@+id/item_transfer_dot05"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text06"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text06"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot05"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line05"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_remark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="*只能使用一次，请务必添加，否则无法到账"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:layout_marginRight="34dp"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text06"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text06"
+    />
+
+    <View
+            android:id="@+id/item_transfer_line06"
+            style="@style/line_style"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="@dimen/transfer_space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_remark"/>
+
+    <View
+            android:id="@+id/item_transfer_dot06"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red"
+            app:layout_constraintLeft_toLeftOf="@+id/item_transfer_text01"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text07"
+            app:layout_constraintBottom_toBottomOf="@+id/item_transfer_text07"/>
+
+    <TextView
+            android:id="@+id/item_transfer_text07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户行行号："
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/transfer_space"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_dot06"
+            app:layout_constraintTop_toBottomOf="@+id/item_transfer_line06"
+    />
+
+    <TextView
+            android:id="@+id/item_transfer_bankno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:layout_marginRight="34dp"
+            android:paddingBottom="36dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_transfer_text07"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_transfer_text07"
+    />
+
+
+</android.support.constraint.ConstraintLayout>

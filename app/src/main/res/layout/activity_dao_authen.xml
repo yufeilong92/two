@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/main_bg"
+        tools:context=".ui.mine.owners.DaoAuthenActivity">
+
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/da0_authen_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleName="道认证"
+            app:rightText="联系客服"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:background="@drawable/bg_white5">
+
+                <TextView
+                        android:id="@+id/dao_authen_text01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请上传你的营业执照照片"
+                        android:textColor="@color/main_text3"
+                        android:textSize="14sp"
+                        android:layout_marginTop="18dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                />
+
+                <TextView
+                        android:id="@+id/dao_authen_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="12dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dao_authen_text03"
+                        app:layout_constraintBottom_toBottomOf="@+id/dao_authen_text03"
+                />
+
+                <TextView
+                        android:id="@+id/dao_authen_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请核实身份证信息内容"
+                        android:textColor="@color/main_text9"
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_authen_text01"
+                        app:layout_constraintLeft_toRightOf="@+id/dao_authen_text02"
+                />
+
+                <TextView
+                        android:id="@+id/dao_authen_text04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="如果照片与信息不符，请重新拍照，如多次不符请联系客服"
+                        android:textColor="#ffe0502f"
+                        android:textSize="10sp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/dao_authen_text03"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_authen_text03"
+                />
+
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/dao_authen_layout01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_authen_text04">
+
+                    <android.support.constraint.ConstraintLayout
+                            android:id="@+id/dao_authen_license"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="@dimen/cer_margin_left"
+                            android:layout_marginRight="@dimen/cer_margin_left"
+                            app:layout_constraintDimensionRatio="W,32:29"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/dao_authen_dao_authen_licensel"
+                    >
+
+                        <android.support.constraint.Guideline
+                                android:id="@+id/dao_authen_guide01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintGuide_percent="0.841"
+                                android:orientation="horizontal"/>
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/icon_liscenseadd"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/dao_authen_license_image"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:roundedCornerRadius="5dp"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <ImageView
+                            android:id="@+id/dao_authen_dao_authen_licensel"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintDimensionRatio="W,32:29"
+                            android:layout_marginRight="@dimen/cer_margin_left"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintLeft_toRightOf="@+id/dao_authen_license"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:src="@mipmap/icon_liscensey"
+                    />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/dao_authen_layout02"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_authen_layout01"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                    <View
+                            android:id="@+id/dao_authen_dot01"
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/dot_red"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text05"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_authen_text05"/>
+
+                    <View
+                            android:id="@+id/dao_authen_dot02"
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/dot_red"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text07"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_authen_text07"/>
+
+                    <View
+                            android:id="@+id/dao_authen_dot03"
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/dot_red"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text09"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_authen_text09"/>
+
+                    <TextView
+                            android:id="@+id/dao_authen_text05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="营业执照号"
+                            android:textColor="@color/main_text9"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@+id/dao_authen_dot01"
+                            app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                    <TextView
+                            android:id="@+id/dao_authen_text06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="15或18位"
+                            android:textColor="@color/main_text3"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="15dp"
+                            app:layout_constraintLeft_toRightOf="@+id/dao_authen_text05"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text05"
+                            app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                    <TextView
+                            android:id="@+id/dao_authen_text07"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="公司名称"
+                            android:textColor="@color/main_text9"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@+id/dao_authen_dot02"
+                            app:layout_constraintTop_toBottomOf="@+id/dao_authen_text06"
+                    />
+
+                    <TextView
+                            android:id="@+id/dao_authen_text08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="中州智惠物流股份有限公司"
+                            android:textColor="@color/main_text3"
+                            android:textSize="13sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_authen_text06"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text07"
+                            app:layout_constraintRight_toRightOf="parent"
+                    />
+
+
+                    <TextView
+                            android:id="@+id/dao_authen_text09"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="公司地址"
+                            android:textColor="@color/main_text9"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@+id/dao_authen_dot03"
+                            app:layout_constraintTop_toBottomOf="@+id/dao_authen_text08"
+                    />
+
+                    <TextView
+                            android:id="@+id/dao_authen_text10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="河南省郑州市管城回族区域经济开发区明湖街道 郑州经济技术开发区经南三路9号青青美庐"
+                            android:textColor="@color/main_text3"
+                            android:textSize="13sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_authen_text06"
+                            app:layout_constraintTop_toTopOf="@+id/dao_authen_text09"
+                            app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white5"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="20dp">
+
+                <ImageView
+                        android:id="@+id/dao_icon01"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:src="@mipmap/icon_man"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="法人授权书"
+                        android:textColor="@color/main_text6"
+                        android:textSize="13sp"
+                        app:layout_constraintTop_toTopOf="@+id/dao_icon01"
+                        app:layout_constraintBottom_toBottomOf="@+id/dao_icon01"
+                        app:layout_constraintLeft_toRightOf="@+id/dao_icon01"
+                        android:layout_marginLeft="12dp"
+                />
+
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/dao_layout01"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="W,111:71"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_icon01"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/dao_layout02"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_gray5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+
+                >
+
+                    <ImageView
+                            android:id="@+id/dao_icon02"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:src="@color/white"
+                            app:layout_constraintDimensionRatio="H,41:57"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                    />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/dao_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:src="@color/white"
+                            app:layout_constraintDimensionRatio="H,41:57"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"/>
+
+                    <ImageView
+                            android:id="@+id/dao_icon04"
+                            android:layout_width="45dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/icon_photo"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_icon02"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_icon02"
+                            app:layout_constraintRight_toRightOf="@+id/dao_icon02"
+                            app:layout_constraintTop_toTopOf="@+id/dao_icon02"
+                    />
+
+                    <View
+                            android:id="@+id/dao_bg01"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toBottomOf="@+id/dao_icon02"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:background="@drawable/bg_red_bottom5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击上传法人授权书"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="32dp"
+                            android:paddingRight="32dp"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_bg01"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_bg01"
+                            app:layout_constraintRight_toRightOf="@+id/dao_bg01"
+                            app:layout_constraintTop_toTopOf="@+id/dao_bg01"
+                            android:background="@color/dao_dark_red_bg"
+                    />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/dao_layout02"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="W,111:71"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_icon01"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/dao_layout01"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_gray5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                >
+
+                    <ImageView
+                            android:id="@+id/dao_icon03"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:src="@mipmap/icon_shouquan"
+                            app:layout_constraintDimensionRatio="H,41:57"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                    />
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/icon_download"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_icon03"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_icon03"
+                            app:layout_constraintRight_toRightOf="@+id/dao_icon03"
+                            app:layout_constraintTop_toTopOf="@+id/dao_icon03"
+                    />
+
+                    <View
+                            android:id="@+id/dao_bg03"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toBottomOf="@+id/dao_icon03"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:background="@drawable/bg_red_bottom5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击下载法人授权书模板"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="32dp"
+                            android:paddingRight="32dp"
+                            app:layout_constraintLeft_toLeftOf="@+id/dao_bg03"
+                            app:layout_constraintBottom_toBottomOf="@+id/dao_bg03"
+                            app:layout_constraintRight_toRightOf="@+id/dao_bg03"
+                            app:layout_constraintTop_toTopOf="@+id/dao_bg03"
+                            android:background="@color/dao_dark_red_bg"
+                    />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                        android:id="@+id/dao_authen_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:text="下一步"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="18dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="18dp"
+                        android:background="@mipmap/icon_button_bg"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dao_layout01"
+                />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,342 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/gm_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+
+    </style>
+
+    <style name="AppWhiteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+
+    <style name="AppNoBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+
+    <style name="StartAppTheme" parent="AppNoBarTheme">
+        <item name="android:windowBackground">@drawable/logo_start_main</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+
+    <!--这是对话框-->
+    <style name="mydialog" parent="@android:style/Theme.Dialog">
+        <!-- 对话框出现时背景是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 对话框背景(重要) -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+
+    <!--这是不带背景的对话框-->
+    <style name="mydialogNobg" parent="@android:style/Theme.Dialog">
+        <!-- 对话框出现时背景是否变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 对话框背景(重要) -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+
+    <style name="text_size_14_wither">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+
+    <style name="text_size_17_wither">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_17</item>
+    </style>
+
+    <style name="text_size_21_wither">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_21</item>
+    </style>
+
+    <style name="text_30_title_weather">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_30</item>
+    </style>
+
+    <style name="text_30_title_whiter">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_30</item>
+    </style>
+
+    <style name="text_14_white_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+
+    <style name="text_16_white_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_16</item>
+    </style>
+
+    <style name="text_16_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_16</item>
+    </style>
+
+    <style name="text_16_title_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_16</item>
+    </style>
+
+    <style name="text_16_title_fu">
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:textSize">@dimen/tv_16</item>
+    </style>
+
+    <style name="text_15_title_qian">
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:textSize">@dimen/tv_15</item>
+    </style>
+
+    <style name="text_15_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_15</item>
+    </style>
+
+    <style name="text_15_title_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_15</item>
+    </style>
+
+    <style name="text_26_white_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_26</item>
+    </style>
+
+    <style name="text_14_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+    <style name="text_14_title_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+    <style name="text_14_title_fu">
+        <item name="android:textColor">@color/main_text6</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+
+    <style name="text_14_title_qian">
+        <item name="android:textColor">@color/gm_color</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+
+    <style name="line_1_heigth_fu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/main_bg</item>
+    </style>
+
+    <style name="text_18_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_18</item>
+    </style>
+
+    <style name="text_18_wither_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_18</item>
+    </style>
+
+    <style name="text_17_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_17</item>
+    </style>
+
+    <style name="text_12_title_fu">
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:textSize">@dimen/tv_12</item>
+    </style>
+
+    <style name="text_11_title_fu">
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:textSize">@dimen/tv_11</item>
+    </style>
+
+    <style name="text_11_title">
+        <item name="android:textColor">@color/gm_color</item>
+        <item name="android:textSize">@dimen/tv_11</item>
+    </style>
+
+    <style name="text_11_title_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_11</item>
+    </style>
+
+    <style name="text_11_title_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_11</item>
+    </style>
+
+    <style name="text_10_white_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+    </style>
+
+    <style name="text_10_title_qian">
+        <item name="android:textColor">@color/main_text6</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+    </style>
+
+    <style name="text_10_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+    </style>
+
+    <style name="text_12_title_qian">
+        <item name="android:textColor">@color/main_text6</item>
+        <item name="android:textSize">@dimen/tv_12</item>
+    </style>
+
+    <style name="text_13_title_qian">
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:textSize">@dimen/tv_13</item>
+    </style>
+
+    <style name="text_13_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_13</item>
+    </style>
+
+    <style name="text_13_title_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_13</item>
+    </style>
+
+    <style name="text_13_title_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_13</item>
+    </style>
+
+    <style name="text_12_title">
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:textSize">@dimen/tv_12</item>
+    </style>
+
+    <style name="text_12_title_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_12</item>
+    </style>
+
+    <style name="text_12_title_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_12</item>
+    </style>
+
+    <style name="text_16_authen">
+        <item name="android:textColor">@color/authen_hear</item>
+        <item name="android:textSize">@dimen/tv_16</item>
+    </style>
+
+    <style name="text_14_authen">
+        <item name="android:textColor">@color/authen_hear</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+    </style>
+
+    <style name="text_10_authen">
+        <item name="android:textColor">@color/authen_hear</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+    </style>
+    <style name="text_10_red">
+        <item name="android:textColor">@color/red_phone</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+    </style>
+    <style name="shipments_tv_14_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+        <item name="android:textColor">@color/main_text6</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shipments_tv_14_title_fu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_14</item>
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="shipments_tv_10_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+        <item name="android:textColor">@color/main_text6</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shipments_tv_10_fu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+        <item name="android:textColor">@color/main_text9</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shipments_tv_10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+        <item name="android:textColor">@color/main_text3</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shipments_tv_10_red">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:textSize">@dimen/tv_10</item>
+        <item name="android:textColor">@color/publish_red_text</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shipment_et_color" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/et_shipment_color</item>
+        <item name="colorControlActivated">@color/et_shipment_color</item>
+    </style>
+
+    <style name="MyNoActionbar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@color/gm_color</item>
+    </style>
+
+    <style name="MyNoActionbar_transparent">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="BackImageStype">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">@dimen/dp_16</item>
+        <item name="android:paddingRight">@dimen/dp_16</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="myNoActionbar_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="view_inary_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+
+        <item name="android:background">@drawable/bg_dao_authen_imaginary_line</item>
+    </style>
+</resources>

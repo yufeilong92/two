@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/dp_12"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_20"
+    android:background="@drawable/gm_bg_radio_white"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_12"
+        android:background="@color/red_phone" />
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_12_title"
+            android:text="标题"
+            android:id="@+id/tv_item_invoice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_below="@id/tv_item_invoice_title"
+               android:text="申请时间"
+               android:layout_marginTop="@dimen/dp_6"
+               android:id="@+id/tv_item_invoice_time"
+               style="@style/text_11_title_red"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:text="钱"
+        style="@style/text_16_title"
+        android:textStyle="bold"
+        android:id="@+id/tv_item_invoice_money"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:text="状态"
+        android:textColor="@drawable/select_invoice_status_color"
+        style="@style/text_13_title"
+        android:button="@null"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/cb_item_invoice_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

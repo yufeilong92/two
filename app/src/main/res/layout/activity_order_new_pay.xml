@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_dao_authen_bg"
+    android:orientation="vertical"
+    tools:context=".ui.find.OrderNewPayActivity">
+
+    <include layout="@layout/gm_title_layout_transparent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_order_pay_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_100"
+            android:background="@color/main_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_order_pay_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/gm_bg_radio_white"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_order_pay_title"
+                style="@style/text_14_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="订单详情" />
+
+            <View
+                android:id="@+id/view_order_pay_line"
+                style="@style/view_inary_line"
+                android:layout_below="@id/tv_order_pay_title"
+                android:layout_marginTop="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/tv_order_pay_city"
+                style="@style/text_16_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_order_pay_line"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="城市" />
+
+            <RelativeLayout
+                android:id="@+id/rl_order_pay_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_pay_city"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_order_pay_number_make"
+                    style="@style/text_12_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单编号" />
+
+                <TextView
+                    android:id="@+id/tv_order_pay_number"
+                    style="@style/text_12_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_toRightOf="@id/tv_order_pay_number_make"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_order_pay_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_order_pay_number"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_order_pay_time_make"
+                    style="@style/text_12_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="创建时间" />
+
+                <TextView
+                    android:id="@+id/tv_order_pay_time"
+                    style="@style/text_12_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_toRightOf="@id/tv_order_pay_time_make"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_order_pay_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/rl_order_pay_time"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_order_pay_count_make"
+                    style="@style/text_12_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单总价" />
+
+                <TextView
+                    android:id="@+id/tv_order_pay_count"
+                    style="@style/text_12_title_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_toRightOf="@id/tv_order_pay_count_make"
+                    android:text="" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_order_pay_top"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/gm_bg_radio_white"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_order_pay_type"
+                style="@style/text_14_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="付款方式" />
+
+            <View
+                android:id="@+id/view_order_pay_line_two"
+                style="@style/view_inary_line"
+                android:layout_below="@id/tv_order_pay_type"
+                android:layout_marginTop="@dimen/dp_10" />
+
+            <LinearLayout
+                android:id="@+id/rl_order_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_order_pay_line_two"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_order_pay_pay"
+                    style="@style/text_14_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="余额支付" />
+
+                <CheckBox
+                    android:clickable="false"
+                    android:id="@+id/cb_order_detail_"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/select_order_cancle"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:background="@color/gm_color"
+           android:layout_width="match_parent"
+           android:layout_alignParentBottom="true"
+           android:layout_height="@dimen/dp_48">
+          <TextView
+              android:layout_width="wrap_content"
+              android:text="合计"
+              style="@style/text_16_white_title"
+              android:layout_centerVertical="true"
+              android:id="@+id/tv_order_pay_heji_make"
+              android:layout_marginLeft="@dimen/dp_40"
+              android:layout_height="wrap_content" />
+           <TextView
+               android:text="价格"
+               android:id="@+id/tv_order_detail_pay_count"
+               android:layout_toRightOf="@id/tv_order_pay_heji_make"
+               android:layout_width="wrap_content"
+               style="@style/text_16_white_title"
+               android:layout_centerVertical="true"
+               android:layout_height="wrap_content" />
+           <TextView
+               android:text="立即支付"
+               android:id="@+id/tv_order_pay_payment"
+               style="@style/text_16_white_title"
+               android:background="@color/red_phone"
+               android:layout_alignParentRight="true"
+               android:gravity="center"
+               android:paddingRight="@dimen/dp_16"
+               android:paddingLeft="@dimen/dp_16"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/dp_48" />
+
+       </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

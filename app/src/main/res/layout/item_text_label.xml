@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text=""
+            android:id="@+id/item_text_label_name"
+            android:textColor="@color/main_text3"
+            android:gravity="center_vertical"
+            android:paddingLeft="21dp"
+            android:textSize="14sp">
+    </TextView>
+
+    <View
+            style="@style/line_style"/>
+
+</LinearLayout>

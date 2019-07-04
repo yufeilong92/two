@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zzzh.akhalteke_shipper">
+    <!-- Required -->
+    <permission
+        android:name="com.zzzh.akhalteke_shipper.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- 权限声明 -->
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- LOCATION权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <!--//读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- Required -->
+    <uses-permission android:name="com.zzzh.akhalteke_shipper.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在 6.0 系统上的层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.find.BaiDuMapActivity"
+            android:theme="@style/AppNoBarTheme"/>
+        <activity
+            android:name=".ui.mine.owners.InvoiceNewActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.OrderNewPayActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.mine.owners.InvoiceNewDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.mine.owners.DaoNewInfoActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.OwnerNewDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.SourceNewDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.mine.owners.DaoNewAuthenActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.login.AuthenNewActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.transport.TransportNewDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.ProtocolNewActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.transport.DriverNewListActivity"
+            android:theme="@style/AppNoBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.find.OrderNewDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.OrderNewComplateDetailActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity android:name=".ui.Main2Activity" />
+        <activity
+            android:name=".ui.weather.WeatherActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.mine.wallet.WalletNewActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.ProtocolNewToActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.publish.ShipmentsActivity"
+            android:theme="@style/AppNoBarTheme" />
+        <activity android:name=".ui.mine.owners.DaoAuthenActivity" />
+        <activity android:name=".ui.login.AuthenActivity" />
+        <activity
+            android:name=".ui.mine.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.WithRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.OwnerMoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.OrderReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.mine.wallet.TransferInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.TransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.InvoiceOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.InvoiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.InvoiceManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.DaoInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.DaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ShowImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.UploadImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.SetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.InvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.owners.CertificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.address.AddressAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.address.AddressManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.BankAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.BankManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.mine.wallet.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.WithdrawingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wallet.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".ui.find.OrderCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.ProtocolToActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.ProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.OwnerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.SourceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.find.SortLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transport.DriverSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transport.DriverDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transport.DriverListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.transport.TransportDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.publish.TruckChoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.publish.PublishActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.login.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.CertificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.login.CompanyCertificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.login.LoginCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoBarTheme" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zzzh.akhalteke_shipper.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="moLt9RFlvodjtudLB0RrLqujEAoevmBQ" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".updateapp.UpdateService" /> <!-- 极光推送 -->
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service> <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+            android:name=".push.MyJCommonService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service> <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".push.MyJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- Required 用户注册 SDK 的 intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收 SDK 消息的 intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收 SDK 通知栏信息的 intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的 intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.zzzh.akhalteke_shipper" />
+            </intent-filter>
+        </receiver> <!-- Required SDK核心功能 since 3.3.0 -->
+        <activity
+            android:name="cn.jpush.android.service.JNotifyActivity"
+            android:exported="true"
+            android:taskAffinity="jpush.custom"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+
+                <category android:name="您应用的包名" />
+            </intent-filter>
+        </activity> <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的 APK 可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="shipper" /> <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="7c4a08e62873d2c44e505271" />
+    </application>
+
+</manifest>

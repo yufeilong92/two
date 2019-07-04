@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context=".ui.transport.DriverNewListActivity">
+
+    <include
+        layout="@layout/gm_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/gm_bg_radio_white">
+
+        <ImageView
+            android:id="@+id/iv_driver_list_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/icon_search" />
+
+        <EditText
+            android:id="@+id/et_driver_list_phone"
+            style="@style/text_15_title_qian"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_driver_list_search"
+            android:background="@color/transparent"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="请输入手机号查询司机"
+            android:padding="@dimen/dp_8" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_driver_list_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_driver_list_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:visibility="gone"
+        android:id="@+id/rl_driver_intver"
+        android:background="@drawable/gm_bg_radio_white"
+        android:padding="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_invite_driver_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="该手机号未注册，赶紧邀请他注册"
+            android:textColor="@color/main_text6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_4"
+            android:id="@+id/tv_driver_invite"
+            android:layout_width="@dimen/dp_80"
+            android:padding="@dimen/dp_6"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_invite_driver_search"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red5"
+            android:text="立即邀请"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_4"
+            android:id="@+id/tv_contact_driver"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_6"
+            android:layout_below="@id/tv_invite_driver_search"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/tv_driver_invite"
+            android:background="@drawable/bg_line_red"
+            android:gravity="center"
+            android:text="联系他"
+            android:textColor="@color/main_color"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

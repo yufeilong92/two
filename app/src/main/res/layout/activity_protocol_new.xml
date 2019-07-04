@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_dao_authen_bg"
+    android:orientation="vertical"
+    tools:context=".ui.find.ProtocolNewActivity">
+
+    <include layout="@layout/gm_title_layout_transparent_right" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/nsv_protocol_root"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_66"
+                    android:background="@color/main_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_protocol_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="@drawable/gm_bg_radio_white"
+                    android:padding="@dimen/dp_16">
+
+                    <TextView
+                        android:id="@+id/tv_protocol_title"
+                        style="@style/text_14_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货物运输协议" />
+
+                    <View
+                        android:id="@+id/view_protocol_nary_line"
+                        style="@style/view_inary_line"
+                        android:layout_below="@id/tv_protocol_title"
+                        android:layout_marginTop="@dimen/dp_16" />
+
+                    <TextView
+                        android:id="@+id/tv_protocol_title_content"
+                        style="@style/text_16_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_protocol_nary_line"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:text="城市" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_protocol_title_content"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_order_number_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单编号" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_order_number_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_order_number_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_order_number"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_order_number_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_one"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_weight_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="重量体积" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_weight_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_weight_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_weight"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_weight_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_two"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_car_type_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车长车型" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_car_type_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_car_type_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_car_type"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_car_type_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_three"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_order_count"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="通过平台支付运费" />
+
+
+                        <TextView
+                            android:id="@+id/tv_protocol_count"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_order_count"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_four"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_pay_time_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="付款时间" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_pay_time_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_pay_time_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_pay_time"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_pay_time_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_six"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_five"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_goods_name_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="货物名称" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_goods_name_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_goods_name_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_goods_name"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_goods_name_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_seven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_six"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_load_time_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="装货时间" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_load_time_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_load_time_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_load_time"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_load_time_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_eight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_seven"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_time_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="到货时间" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_time_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_dao_time_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_time"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_dao_time_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_nine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_eight"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_address_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="装货地址" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_address_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_dao_address_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_dao_address"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_dao_address_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_ten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_nine"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_unload_address_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="卸货地址" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_unload_address_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_unload_address_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_unload_address"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_unload_address_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_eleven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_ten"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_other_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="其他约定" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_other_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_other_make"
+                            android:text="占位符符"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_other"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_other_content_make"
+                            android:text="内容" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_protocol_infom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_protocol_root"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/gm_bg_radio_white"
+                    android:padding="@dimen/dp_16">
+
+                    <LinearLayout
+                        android:id="@+id/ll_protocol_consigner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_35"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:background="@drawable/bg_protocol_agreement_gray">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_consigner"
+                            style="@style/text_15_title_white"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_protocol_agreement_black"
+                            android:gravity="center"
+                            android:text="发货人" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_driver"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="承运司机" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_protocol_consigner"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_name_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_name_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_protocol_name_make"
+                            android:text="站位"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_name"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_name_content_make"
+                            android:text="内容" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_protocol_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_name"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                        <TextView
+                            android:id="@+id/tv_protocol_phone_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系方式" />
+
+                        <TextView
+                            android:id="@+id/tv_protocol_phone"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/tv_protocol_phone_make"
+                            android:text="内容" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_protocol_phone"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_protocol_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_protocol_address_make"
+                                style="@style/text_12_title_qian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="公司地址" />
+
+                            <TextView
+                                android:id="@+id/tv_protocol_address"
+                                style="@style/text_12_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@id/tv_protocol_address_make"
+                                android:text="内容" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_protocol_plate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_protocol_plate_make"
+                                style="@style/text_12_title_qian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="车牌号" />
+
+                            <TextView
+                                android:id="@+id/tv_protocol_plate_content_make"
+                                style="@style/text_12_title_qian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/tv_protocol_plate_make"
+                                android:text="站"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/tv_protocol_plate"
+                                style="@style/text_12_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@id/tv_protocol_plate_content_make"
+                                android:text="内容" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_protocol_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16">
+
+                            <TextView
+                                android:id="@+id/tv_protocol_time_make"
+                                style="@style/text_12_title_qian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="发起时间" />
+
+                            <TextView
+                                android:id="@+id/tv_protocol_time"
+                                style="@style/text_12_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@id/tv_protocol_time_make"
+                                android:text="内容" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_protocol_send_hear"
+                        android:layout_width="@dimen/dp_66"
+                        android:layout_height="@dimen/dp_66"
+                        android:layout_below="@id/ll_protocol_consigner"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@mipmap/icon_header" />
+
+                    <ImageView
+                        android:id="@+id/iv_protocol_driver_hear"
+                        android:layout_width="@dimen/dp_66"
+                        android:layout_height="@dimen/dp_66"
+                        android:layout_below="@id/ll_protocol_consigner"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@mipmap/icon_header"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/web_protocol_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_below="@id/rl_protocol_infom"
+                    android:layout_marginRight="@dimen/dp_16">
+                </WebView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical"
+        tools:context=".ui.mine.wallet.WithdrawingActivity">
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/withdrawing_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleName="提现"
+            app:rightText="提现记录"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon_card_bg"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="4dp"/>
+
+        <ImageView
+                android:id="@+id/withdrawing_icon01"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:src="@mipmap/icon_withdrawing"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+        />
+
+        <TextView
+                android:id="@+id/withdrawing_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理中…"
+                android:textColor="@color/main_text3"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_icon01"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="12dp"
+        />
+
+        <TextView
+                android:id="@+id/withdrawing_text02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现金额于12小时内到账"
+                android:textColor="#ff999999"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_text01"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="12dp"
+        />
+
+
+        <View
+                android:id="@+id/withdrawing_dot01"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/dot_withdrawing_n"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/withdrawing_line01"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_text02"
+                android:layout_marginTop="32dp"/>
+
+        <View
+                android:id="@+id/withdrawing_line01"
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:background="@color/withdraw_red"
+                app:layout_constraintLeft_toRightOf="@+id/withdrawing_dot01"
+                app:layout_constraintRight_toLeftOf="@+id/withdrawing_dot02"
+                app:layout_constraintTop_toTopOf="@+id/withdrawing_dot01"
+                app:layout_constraintBottom_toBottomOf="@+id/withdrawing_dot01"
+        />
+
+        <View
+                android:id="@+id/withdrawing_dot02"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/dot_withdrawing_n"
+                app:layout_constraintLeft_toRightOf="@+id/withdrawing_line01"
+                app:layout_constraintRight_toLeftOf="@+id/withdrawing_line02"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_text02"
+                android:layout_marginTop="32dp"/>
+
+        <View
+                android:id="@+id/withdrawing_line02"
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:background="@color/withdraw_red"
+                app:layout_constraintLeft_toRightOf="@+id/withdrawing_dot02"
+                app:layout_constraintRight_toLeftOf="@+id/withdrawing_dot03"
+                app:layout_constraintTop_toTopOf="@+id/withdrawing_dot01"
+                app:layout_constraintBottom_toBottomOf="@+id/withdrawing_dot01"
+        />
+
+        <View
+                android:id="@+id/withdrawing_dot03"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/dot_withdrawing_n"
+                app:layout_constraintLeft_toRightOf="@+id/withdrawing_line02"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_text02"
+                android:layout_marginTop="32dp"/>
+
+        <TextView
+                android:id="@+id/withdrawing_text03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交申请"
+                android:textColor="@color/withdraw_red"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_dot01"
+                app:layout_constraintLeft_toLeftOf="@+id/withdrawing_dot01"
+                app:layout_constraintRight_toRightOf="@+id/withdrawing_dot01"
+                android:layout_marginTop="10dp"
+        />
+
+        <TextView
+                android:id="@+id/withdrawing_text04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核"
+                android:textColor="@color/withdraw_red"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_dot02"
+                app:layout_constraintLeft_toLeftOf="@+id/withdrawing_dot02"
+                app:layout_constraintRight_toRightOf="@+id/withdrawing_dot02"
+                android:layout_marginTop="10dp"
+        />
+
+        <TextView
+                android:id="@+id/withdrawing_text05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现成功"
+                android:textColor="@color/withdraw_red"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawing_dot03"
+                app:layout_constraintLeft_toLeftOf="@+id/withdrawing_dot03"
+                app:layout_constraintRight_toRightOf="@+id/withdrawing_dot03"
+                android:layout_marginTop="10dp"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

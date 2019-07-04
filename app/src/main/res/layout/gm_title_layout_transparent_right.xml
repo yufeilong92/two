@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.shangxing.views.page.MyBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barBg="@color/transparent" />
+
+    <RelativeLayout style="@style/MyNoActionbar_transparent">
+
+        <ImageView
+            style="@style/BackImageStype"
+            android:onClick="onHomeBack"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/gm_tv_activity_title"
+            style="@style/myNoActionbar_title"
+             />
+
+        <TextView
+            android:id="@+id/tv_gm_activity_right_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp_16"
+            style="@style/myNoActionbar_title"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/tv_14"
+           />
+    </RelativeLayout>
+</merge>

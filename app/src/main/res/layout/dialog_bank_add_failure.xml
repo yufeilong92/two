@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:background="@drawable/bg_white5"
+                                             android:paddingBottom="34dp">
+
+    <ImageView
+            android:id="@+id/dialog_baf_cancel"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:padding="18dp"
+            android:src="@mipmap/icon_cha"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="13dp"
+    />
+
+    <TextView
+            android:id="@+id/dialog_baf_text01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加失败"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <ImageView
+            android:id="@+id/dialog_baf_icon01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_addbank_failure"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_baf_text01"
+            android:layout_marginTop="56dp"
+    />
+
+    <TextView
+            android:id="@+id/dialog_baf_text02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请重新输入您的银行卡信息"
+            android:textColor="@color/main_text9"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_baf_text01"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/dialog_baf_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新填写银行卡信息"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            android:background="@drawable/bg_button_red_oval"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_baf_icon01"
+            android:layout_marginTop="33dp"
+    />
+
+</android.support.constraint.ConstraintLayout>

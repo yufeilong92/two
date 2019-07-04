@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/main_bottom_height"
+              android:background="#403F3F"
+              android:paddingTop="5dp"
+              android:clipChildren="false"
+              android:clipToPadding="false"
+              android:orientation="horizontal">
+
+    <LinearLayout
+            android:id="@+id/layout1"
+            style="@style/Buttom_Item_Style">
+
+        <ImageView
+                android:id="@+id/image1"
+                android:layout_width="@dimen/tab_icon_wh"
+                android:layout_height="@dimen/tab_icon_wh"
+                android:src="@drawable/selector_tabbar_icon1" />
+
+        <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tab_space"
+                android:text="@string/fragment_name0"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/tab_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout2"
+            style="@style/Buttom_Item_Style">
+
+        <ImageView
+                android:id="@+id/image2"
+                android:layout_width="@dimen/tab_icon_wh"
+                android:layout_height="@dimen/tab_icon_wh"
+                android:src="@drawable/selector_tabbar_icon2" />
+
+        <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tab_space"
+                android:text="@string/fragment_name2"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/tab_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout3"
+            style="@style/Buttom_Item_Style">
+
+        <ImageView
+                android:id="@+id/image3"
+                android:layout_height="@dimen/tab_icon_wh"
+                android:layout_width="@dimen/tab_icon_wh"
+                android:src="@drawable/selector_tabbar_icon3" />
+
+        <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tab_space"
+                android:text="@string/fragment_name3"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/tab_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/layout4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="LayoutOnclickMethod">
+
+        <LinearLayout
+                android:id="@+id/layout4_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="@dimen/tab_icon_wh"
+                    android:layout_height="@dimen/tab_icon_wh"
+                    android:src="@drawable/selector_tabbar_icon4" />
+
+            <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tab_space"
+                    android:text="@string/fragment_name4"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/layout5"
+            style="@style/Buttom_Item_Style">
+
+        <ImageView
+                android:id="@+id/image5"
+                android:layout_width="@dimen/tab_icon_wh"
+                android:layout_height="@dimen/tab_icon_wh"
+                android:src="@drawable/selector_tabbar_icon5" />
+
+        <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tab_space"
+                android:text="@string/fragment_name5"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/tab_text_size" />
+    </LinearLayout>
+
+
+</LinearLayout>

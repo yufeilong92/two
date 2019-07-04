@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/ic_dao_authen_bg"
+              android:orientation="vertical"
+              tools:context=".ui.mine.owners.DaoNewInfoActivity">
+
+    <include layout="@layout/gm_title_layout_transparent"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+        android:visibility="gone"
+        android:id="@+id/nsv_dao_root"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:id="@+id/ll_dao_infom_content_infom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@drawable/gm_bg_radio_white"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:id="@+id/ll_left_dao_infom"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/bg_dao_authen_right_radiou_black"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:src="@drawable/bg_dao_authen_right_radiou_black"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16">
+
+                <ImageView
+                        android:id="@+id/iv_dao_infom_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_dao_red"/>
+
+                <TextView
+                        android:id="@+id/tv_dao_infom_title_make"
+                        style="@style/text_14_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:text="增值税专用发票"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:id="@+id/view_dao_infom_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/iv_dao_infom_logo"
+                        android:background="@drawable/bg_dao_authen_imaginary_line"/>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_rise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_dao_infom_line"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_rise"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发票抬头"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_rise_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_rise"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_rise_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_rise_make"
+                            android:text="公司"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_coding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_dao_infom_rise"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_coding"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="纳税人识别码"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_coding_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_coding"
+                            android:text="纳税人识别码"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_dao_infom_coding"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_address"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注册地址"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_address_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_address"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_address_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_address_make"
+                            android:text="地址"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_dao_infom_address"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_phone"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注册电话"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_phone_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_phone"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_phone_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_phone_make"
+                            android:text="电话"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_dao_infom_phone"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="银行名称"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_bank"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_bank_make"
+                            android:text="银行"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_dao_infom_bank"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank_name"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="银行账号"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank_name_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_bank_name"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_bank_name_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_bank_name_make"
+                            android:text="银行账号"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_dao_infom_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_dao_infom_bank_name"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_content"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发票内容"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_content_make"
+                            style="@style/text_12_title_qian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_dao_infom_content"
+                            android:text="站位"
+                            android:visibility="invisible"/>
+
+                    <TextView
+                            android:id="@+id/tv_dao_infom_infom_content"
+                            style="@style/text_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_toRightOf="@id/tv_dao_infom_content_make"
+                            android:text="内容"/>
+                </RelativeLayout>
+
+                <TextView
+                        android:id="@+id/tv_dao_infom_book"
+                        style="@style/text_14_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_dao_infom_content"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:text="法人授权书"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:id="@+id/view_dao_infom_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/tv_dao_infom_book"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@drawable/bg_dao_authen_imaginary_line"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/iv_dao_infom_book"
+                        android:layout_width="160dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/view_dao_infom_book"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_16"
+                        app:failureImage="@mipmap/ic_dao_infom_rise"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                    android:id="@+id/ll_right_dao_infom"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/bg_dao_authen_left_radiou_black"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/bg_dao_authen_left_radiou_black"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

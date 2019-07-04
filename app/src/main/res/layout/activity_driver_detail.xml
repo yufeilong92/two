@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/main_bg"
+                                             tools:context=".ui.transport.DriverDetailActivity">
+
+    <com.zzzh.akhalteke_shipper.view.page.MyTitleView
+            android:id="@+id/driver_detail_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleName="司机简介"/>
+
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/driver_detail_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_white5"
+            android:paddingLeft="20dp"
+            android:paddingBottom="12dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/driver_detail_top">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/driver_detail_header"
+                style="@style/place_image_style"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundedCornerRadius="5dp"/>
+
+        <TextView
+                android:id="@+id/driver_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/main_text3"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/driver_detail_header"
+                app:layout_constraintTop_toTopOf="@+id/driver_detail_header"/>
+
+        <TextView
+                android:id="@+id/driver_detail_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="@color/main_text6"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/driver_detail_name"
+                app:layout_constraintTop_toBottomOf="@+id/driver_detail_name"/>
+
+        <TextView
+                android:id="@+id/driver_detail_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingRight="18dp"
+                android:text=""
+                android:textColor="@color/main_text6"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/driver_detail_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/driver_detail_phone"/>
+
+        <TextView
+                android:id="@+id/driver_detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/bg_driver_cooked_car_tag"
+                android:paddingLeft="9dp"
+                android:paddingTop="1dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="1dp"
+                android:text="熟车"
+                android:textColor="@color/main_color"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/driver_detail_name"
+                app:layout_constraintLeft_toRightOf="@+id/driver_detail_name"
+                app:layout_constraintTop_toTopOf="@+id/driver_detail_name"/>
+
+        <TextView
+                android:id="@+id/driver_detail_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_24"
+                android:background="@drawable/bg_lift_driver_infom_radio"
+                android:paddingLeft="@dimen/dp_16"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="移除熟车"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+            android:id="@+id/driver_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_white5"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:visibility="visible"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/driver_detail_car"
+            app:layout_constraintBottom_toTopOf="@+id/driver_detail_call">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/driver_detail_smart"
+                style="@style/smarttablayout_style_normal"
+                app:stl_indicatorWidth="58dp"/>
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/driver_detail_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/driver_detail_call"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/gm_bg_radio_black"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:text="拨打电话"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="W,1:6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

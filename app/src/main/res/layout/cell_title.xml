@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_title_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/gm_color">
+
+    <TextView
+        android:id="@+id/cell_title_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size" />
+
+    <LinearLayout
+        android:id="@+id/cell_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/icon_back_white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cell_title_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_height"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="3dp"
+        android:text="退出"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_right_size"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cell_title_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_height"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="13dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp" />
+
+</RelativeLayout>

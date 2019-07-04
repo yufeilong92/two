@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/bg_white5">
+
+
+    <TextView
+            android:id="@+id/dialog_promise_single_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示"
+            android:textColor="@color/main_text3"
+            android:textSize="12sp"
+            android:paddingTop="18dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_gravity="center"
+    />
+
+    <TextView
+            android:id="@+id/dialog_promise_single_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功"
+            android:textColor="@color/main_text9"
+            android:textSize="12sp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_gravity="center"
+    />
+
+    <View
+            style="@style/line_style"/>
+
+    <TextView
+            android:id="@+id/dialog_promise_single_sure"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="我知道了"
+            android:textColor="@color/main_color"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"
+    />
+
+</LinearLayout>

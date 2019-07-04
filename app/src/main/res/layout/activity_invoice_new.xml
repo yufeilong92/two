@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_dao_authen_bg"
+    android:orientation="vertical"
+    tools:context=".ui.mine.owners.InvoiceNewActivity">
+
+    <include layout="@layout/gm_title_layout_transparent_right" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/gm_bg_radio_white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_left_up_infom"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/bg_dao_authen_right_radiou_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:src="@drawable/bg_dao_authen_right_radiou_black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_invoice_main"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_invoice_title"
+                    style="@style/text_14_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的专票资质" />
+
+                <View
+                    android:id="@+id/view_dao_infom_line"
+                    style="@style/view_inary_line"
+                    android:layout_below="@id/tv_invoice_title"
+                    android:layout_marginTop="@dimen/dp_10" />
+
+                <TextView
+                    android:id="@+id/tv_invocice_title"
+                    style="@style/text_14_title_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_dao_infom_line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="增值税专用发票" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_invocice_title"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_hear_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票抬头" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_hear_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_hear_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_hear_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_hear_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_one"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_tax_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="纳税人识别码" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_tax_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_tax_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_two"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_address_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册地址" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_address_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_address_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_address_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_address_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_three"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_phone_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册电话" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_phone_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_phone_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_phone_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_phone_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_four"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_name_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行名称" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_name_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_bank_name_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_name_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_bank_name_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_five"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_account_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行账号" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_account_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_bank_account_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_bank_account_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_bank_account_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_six"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_infom_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票内容" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_infom_content_make"
+                        style="@style/text_12_title_qian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_invoice_infom_make"
+                        android:text="站位"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_infom_content"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/tv_invoice_infom_content_make"
+                        android:text="内容" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_waring"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_seven"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_invoice_make"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_tishi" />
+
+                    <TextView
+                        style="@style/text_10_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_toRightOf="@id/iv_invoice_make"
+                        android:text="本页面信息仅供增值税专用发票资质审核使用，切勿进行支付相关业务，谨防上当受骗。" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_invoice_waring"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_invoice_alter"
+                        style="@style/text_16_white_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/gm_bg_radio_black"
+                        android:text="修改" />
+
+                    <Space
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/btn_invoice_sumbit"
+                        style="@style/text_16_white_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/gm_bg_radio_black"
+                        android:text="提交" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right_up_infom"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/bg_dao_authen_left_radiou_black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/bg_dao_authen_left_radiou_black" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

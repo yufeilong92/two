@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/gm_weather_title_root"/>
+
+    <include
+            android:id="@+id/ftab1_filter"
+            layout="@layout/cell_main_send_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+        <com.lipo.views.FlowLayout
+                android:id="@+id/ftab1_flow"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="4dp"
+                android:visibility="gone"/>
+        <TextView
+                android:id="@+id/ftab1_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:paddingBottom="8dp"
+                android:text="清空"
+                android:visibility="gone"
+                android:textColor="@color/main_text6"
+                android:textSize="10sp"/>
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/ftab1_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/ftab1_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

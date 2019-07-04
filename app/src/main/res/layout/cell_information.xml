@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <TextView
+            android:id="@+id/information_text02"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:text="身份证号"
+            android:textColor="@color/main_text6"
+            android:textSize="13sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/main_text3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/information_text02"
+            app:layout_constraintBottom_toBottomOf="@+id/information_text02"
+    />
+
+</merge>

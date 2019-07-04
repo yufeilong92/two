@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_16"
+    android:background="@drawable/gm_bg_radio_white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10">
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_height="@dimen/dp_16"
+            android:background="@color/red_phone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_item_send_goods_address"
+                style="@style/text_16_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="城市"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_send_goods_infom"
+                style="@style/text_13_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_send_goods_address"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="物品" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_send_goods_infom"
+                android:layout_marginTop="@dimen/dp_6">
+
+                <TextView
+                    android:id="@+id/tv_item_send_goods_publish"
+                    style="@style/text_11_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布时间:" />
+
+                <TextView
+                    android:id="@+id/tv_item_send_goods_time"
+                    style="@style/text_11_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_item_send_goods_publish"
+                    android:text="时间" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_item_send_goods_time"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tv_item_designated_driver"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@mipmap/ic_designated_driver_log"
+                        android:text="指定司机" />
+
+                    <ImageView
+                        android:id="@+id/tv_item_refresh_log"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_toRightOf="@id/tv_item_designated_driver"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@mipmap/ic_refresh_log"
+                        android:text="刷新置顶" />
+
+                    <ImageView
+                        android:id="@+id/tv_item_deete_log"
+                        style="@style/text_12_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_toRightOf="@id/tv_item_refresh_log"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@mipmap/ic_delete_log"
+                        android:text="删除" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

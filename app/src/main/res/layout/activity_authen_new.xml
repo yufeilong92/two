@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.AuthenNewActivity">
+
+    <include layout="@layout/gm_title_layout_right" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_14_title_qian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="请上传你的身份证照片核实身份证信息内容" />
+
+            <ImageView
+                android:id="@+id/iv_authen_id_z"
+                android:layout_width="145dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@mipmap/ic_authen_shenfenzhengmian" />
+
+            <TextView
+                android:id="@+id/tv_authen_updata_id_z"
+                style="@style/text_16_authen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="点击上传带头像的一面" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_authen_name_make"
+                    style="@style/text_16_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名" />
+
+                <TextView
+                    android:id="@+id/tv_authen_name_makez"
+                    style="@style/text_16_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_authen_name_make"
+                    android:text="姓名"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_authen_name"
+                    style="@style/text_16_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@id/tv_authen_name_makez"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_authen_idnumber_make"
+                    style="@style/text_16_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号" />
+
+                <TextView
+                    android:id="@+id/tv_authen_idnumber"
+                    style="@style/text_16_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@id/tv_authen_idnumber_make"
+                    android:text="" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_authen_id_f"
+                android:layout_width="145dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@mipmap/ic_authen_shenfenzhengfanmian" />
+
+            <TextView
+                android:id="@+id/tv_authen_updata_id_f"
+                style="@style/text_16_authen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="点击上传带国徽的一面" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_authen_visa_make"
+                    style="@style/text_16_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签证机关" />
+
+                <TextView
+                    android:id="@+id/tv_authen_visa"
+                    style="@style/text_16_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@id/tv_authen_visa_make"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_authen_validity_make"
+                    style="@style/text_16_title_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期至" />
+
+                <TextView
+                    android:id="@+id/tv_authen_validity"
+                    style="@style/text_16_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@id/tv_authen_validity_make"
+                    android:text="" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_authen_hear"
+                android:layout_width="145dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@mipmap/ic_authen_hear" />
+
+            <TextView
+                android:id="@+id/tv_authen_updata_hear"
+                style="@style/text_16_authen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="点击上传头像照片" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="请确认您的个人信息，若有误请点击修改" />
+
+            <Button
+                android:id="@+id/btn_authen_authentication"
+                style="@style/text_16_white_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/gm_bg_radio_black"
+                android:text="提交认证" />
+
+            <TextView
+                style="@style/text_10_authen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:gravity="center"
+                android:text="如果照片与信息不符，请重新拍照，如多次不符请联系客服" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.weather.WeatherActivity">
+    <com.zzzh.akhalteke_shipper.weather.DynamicWeatherViews
+            android:id="@+id/weather_view_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_24">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_11"
+                    android:src="@mipmap/ic_back"
+                    android:id="@+id/ic_weather_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:focusableInTouchMode="true">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_weather_city"
+                            style="@style/text_30_title_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="城市" />
+
+                    <TextView
+                            android:id="@+id/tv_weather_wea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_11"
+                            android:text="天气"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tv_18" />
+
+                    <TextView
+                            android:id="@+id/tv_weather_temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_11"
+                            android:text="温度"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_16">
+
+                        <TextView
+                                android:id="@+id/tv_weahter_week"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="星期"
+                                android:textColor="@color/white" />
+
+                        <TextView
+                                android:id="@+id/tv_weather_today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@id/tv_weahter_week"
+                                android:text="今天"
+                                android:textColor="@color/white" />
+
+                        <TextView
+                                android:id="@+id/tv_weather_max_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/tv_weather_min_time"
+                                android:layout_toLeftOf="@id/tv_weather_min_time"
+                                android:text="max_time"
+                                android:textColor="@color/white" />
+
+                        <TextView
+                                android:id="@+id/tv_weather_min_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:text="min_time"
+                                android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <View
+                            style="@style/line_1_heigth_fu"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8" />
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rlv_weather_hour_wea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    <View
+                            style="@style/line_1_heigth_fu"
+                            android:layout_marginTop="@dimen/dp_8" />
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:layout_height="wrap_content">
+                        <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rlv_weather_day_wea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center_horizontal"
+                            android:text="From:WWW.ZHWL.PRO"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

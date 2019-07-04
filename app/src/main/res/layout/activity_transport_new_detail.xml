@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.transport.TransportNewDetailActivity">
+
+    <include layout="@layout/gm_title_layout" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_transport_detail_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/gm_bg_radio_white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_16">
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="@color/red_phone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_transport_detail_address"
+                style="@style/text_16_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_transport_detail_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_below="@id/tv_transport_detail_address"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_time_make"
+                    style="@style/text_13_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间" />
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_time"
+                    style="@style/text_13_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/tv_transport_detail_time_make"
+                    android:text="时间" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transport_detail_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_below="@id/rl_transport_detail_time"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_car_make"
+                    style="@style/text_13_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆" />
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_car"
+                    style="@style/text_13_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/tv_transport_detail_car_make"
+                    android:text="时间" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transport_detail_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_below="@id/rl_transport_detail_car"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_goods_make"
+                    style="@style/text_13_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="货物" />
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_goods"
+                    style="@style/text_13_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/tv_transport_detail_goods_make"
+                    android:text="时间" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transport_detail_other"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_transport_detail_address"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_other_make"
+                    style="@style/text_13_title_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <TextView
+                    android:id="@+id/tv_transport_detail_other"
+                    style="@style/text_13_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/tv_transport_detail_other_make"
+                    android:text="时间" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_13_title"
+                android:id="@+id/tv_transport_detail_tog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_transport_detail_other"
+                android:layout_marginTop="@dimen/dp_12"
+                android:gravity="center"
+                android:text="定金请优先通过平台支付"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_transport_detail"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_below="@id/tv_transport_detail_tog"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:id="@+id/iv_designated_driver_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_designated_driver_log" />
+
+                <ImageView
+                    android:id="@+id/iv_refresh_log"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_refresh_log" />
+
+                <ImageView
+                    android:id="@+id/iv_delete_log"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_delete_log" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

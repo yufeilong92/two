@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_white5"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+
+    <TextView
+        android:id="@+id/item_io_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="8dp"
+        android:text=""
+        android:textColor="@color/main_text3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/item_io_path_toicon"-->
+    <!--android:layout_width="14dp"-->
+    <!--android:layout_height="14dp"-->
+    <!--android:src="@mipmap/icon_to"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/item_io_path"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/item_io_path"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/item_io_path"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/item_io_path_to"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/main_text3"-->
+    <!--android:textSize="15sp"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/item_io_path_toicon"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/item_io_path"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:textStyle="bold"-->
+    <!--/>-->
+
+    <TextView
+        android:id="@+id/item_io_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/main_text6"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_path" />
+
+    <View
+        android:id="@+id/item_io_line"
+        style="@style/line_style"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_type" />
+
+    <TextView
+        android:id="@+id/item_io_text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="订单编号"
+        android:textColor="@color/main_text6"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_line" />
+
+    <TextView
+        android:id="@+id/item_io_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/main_text6"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_line" />
+
+    <TextView
+        android:id="@+id/item_io_text02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="下单时间"
+        android:textColor="@color/main_text6"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_text01" />
+
+    <TextView
+        android:id="@+id/item_io_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text=""
+        android:textColor="@color/main_text6"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_text01" />
+
+    <View
+        android:id="@+id/item_io_line02"
+        style="@style/line_style"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_text02" />
+
+    <TextView
+        android:id="@+id/item_io_text03"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="金额："
+        android:textColor="@color/main_text3"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_io_line02" />
+
+    <TextView
+        android:id="@+id/item_io_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/main_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_io_text03"
+        app:layout_constraintLeft_toRightOf="@+id/item_io_text03"
+        app:layout_constraintTop_toTopOf="@+id/item_io_text03" />
+
+    <ImageView
+        android:id="@+id/item_io_radio"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@mipmap/icon_radio_red"
+        app:layout_constraintBottom_toBottomOf="@+id/item_io_text03"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_io_text03" />
+
+</android.support.constraint.ConstraintLayout>
